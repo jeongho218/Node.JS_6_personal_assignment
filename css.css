@@ -1,0 +1,66 @@
+* {
+    /*기본 여백 없애기*/
+    margin: 0px;
+}
+
+.myganpan {
+    /*간판을 위한 CSS*/
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 225, 148);
+    padding-top: 15px;
+    text-align: center;
+
+}
+
+.search {
+    /* 검색 공간을 위한 CSS */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: rgb(222, 243, 242);
+
+}
+
+#search-label {
+    /*'영화 검색' 크기 조절*/
+    font-size: 20px;
+
+}
+
+#search-input {
+    /*입력칸 조절 CSS*/
+    height: 28px;
+    font-size: 15px;
+}
+
+
+#search-btn {
+    /*'검색' 버튼 크기 조절*/
+    height: 33px;
+    cursor: pointer;
+}
+
+.card-list {
+    /*카드를 3열 종대로 만들기 위한 CSS*/
+    border-top: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(222, 243, 242);
+
+}
+
+.movie-card {
+    /*무비 카드의 형태를 조절하는 CSS*/
+    border: 2px solid rgb(255, 228, 196);
+    background-color: rgb(255, 228, 196);
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+p {
+    /*영화 설명은 왼쪽으로 정렬*/
+    text-align: left;
+}
