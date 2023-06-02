@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 개인과제</title>
+    <link rel="icon" href="./favicon.png" /> <!--브라우저 탭 아이콘-->
+    <link rel="apple-touch-icon" href="./favicon.png" /> <!--Safari와 IOS 유저를 위해서는 apple-touch-icon 속성이 필요하다. -->
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+
+<body>
+    <div class="myganpan">
+        <h1>내배캠 최고 평점 영화 콜렉션</h1>
+    </div>
+
+    <form class="search" onsubmit="handelSearch(event)">
+        <label id="search-label">영화 검색 : </label>
+        <input type="text" id="search-input" placeholder="영화 제목을 검색해보세요">
+        <button type="submit" id="search-btn">검색</button>
+    </form>
+    <section class="card-list">
+        <!-- 현재 하단에 있는 '무비 카드'들은 테스트 용도, 개발 중 삭제 예정 -->
+        <div class="movie-card" id="238" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Godfather">
+            <h3 class="movie-title">The Godfather</h3>
+            <p>Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family.
+                When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his
+                youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody
+                revenge.</p><br>
+            <p>Rating: 8.7</p>
+        </div>
+        <div class="movie-card" id="278" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="The Shawshank Redemption">
+            <h3 class="movie-title">The Shawshank Redemption</h3>
+            <p>Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne
+                begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral
+                warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates --
+                including an older prisoner named Red -- for his integrity and unquenchable sense of hope.</p><br>
+            <p>Rating: 8.7</p>
+        </div>
+        <div class="movie-card" id="240" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/5ZSfJ9aleg2rGhVWp0Dcqv38Nr5.jpg" alt="The Godfather Part II">
+            <h3 class="movie-title">The Godfather Part II</h3>
+            <p>In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in
+                1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas,
+                Hollywood and Cuba.</p><br>
+            <p>Rating: 8.6</p>
+        </div>
+        <div class="movie-card" id="19404" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/ktejodbcdCPXbMMdnpI9BUxW6O8.jpg"
+                alt="Dilwale Dulhania Le Jayenge">
+            <h3 class="movie-title">Dilwale Dulhania Le Jayenge</h3>
+            <p>Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev
+                Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for
+                India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim
+                his lady love under the noses of her whole family. Thus begins a saga.</p><br>
+            <p>Rating: 8.6</p>
+        </div>
+        <div class="movie-card" id="424" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg" alt="Schindler's List">
+            <h3 class="movie-title">Schindler's List</h3>
+            <p>The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while
+                they worked as slaves in his factory during World War II.</p><br>
+            <p>Rating: 8.6</p>
+        </div>
+        <div class="movie-card" id="772071" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/6gIJuFHh5Lj4dNaPG3TzIMl7L68.jpg" alt="Cuando Sea Joven">
+            <h3 class="movie-title">Cuando Sea Joven</h3>
+            <p>70-year-old Malena gets a second chance at life when she magically turns into her 22-year-old self. Now,
+                posing as "Maria" to hide her true identity, she becomes the lead singer of her grandson's band and
+                tries to recover her dream of singing, which she had to give up at some point.</p><br>
+            <p>Rating: 8.5</p>
+        </div>
+        <div class="movie-card" id="129" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg" alt="Spirited Away">
+            <h3 class="movie-title">Spirited Away</h3>
+            <p>A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a
+                mysterious transformation, she must call upon the courage she never knew she had to free her family.</p>
+            <p>Rating: 8.5</p>
+        </div>
+        <div class="movie-card" id="389" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/ow3wq89wM8qd5X7hWKxiRfsFf9C.jpg" alt="12 Angry Men">
+            <h3 class="movie-title">12 Angry Men</h3>
+            <p>The defense and the prosecution have rested and the jury is filing into the jury room to decide if a
+                young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut
+                case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the
+                accused, and each other.</p>
+            <p>Rating: 8.5</p>
+        </div>
+        <div class="movie-card" id="372058" style="display: block;">
+            <img src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg" alt="Your Name.">
+            <h3 class="movie-title">Your Name.</h3>
+            <p>High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they
+                suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence
+                continues to happen randomly, and the two must adjust their lives around each other.</p>
+            <p>Rating: 8.5</p>
+        </div>
+    </section>
+
+    <script src="js.js"></script>
+
+</body>
+</html>
